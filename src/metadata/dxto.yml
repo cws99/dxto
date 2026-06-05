@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/dxto
+
+idspace: DXTO
+base_url: /obo/dxto
+
+products:
+- dxto.owl: https://raw.githubusercontent.com/cws99/dxto/main/dxto.owl
+- dxto.obo: https://raw.githubusercontent.com/cws99/dxto/main/dxto.obo
+
+term_browser: ontobee
+example_terms:
+- DXTO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/cws99/dxto/v
+
+- prefix: /tracker/
+  replacement: https://github.com/cws99/dxto/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/DXTO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/cws99/dxto/main/
