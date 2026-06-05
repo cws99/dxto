@@ -1,0 +1,11 @@
+#curie_map:
+# DXTO: http://purl.obolibrary.org/obo/DXTO_
+# LOINC: https://loinc.org/
+# skos: http://www.w3.org/2004/02/skos/core#
+# semapv: https://w3id.org/semapv/vocab/
+#mapping_set_id: https://purl.obolibrary.org/obo/dxto/dxto-mappings.sssom.tsv
+#mapping_set_version: 2026-06-05
+#license: https://creativecommons.org/licenses/by/4.0/
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	comment
+DXTO:0000001	sweat chloride test	skos:exactMatch	LOINC:2077-6	Chloride [Moles/volume] in Sweat	semapv:ManualMappingCuration	OMOP domain: Measurement
+DXTO:0000002	CFTR gene targeted mutation analysis	skos:exactMatch	LOINC:38404-0	CFTR gene targeted mutation analysis in Blood or Tissue by Molecular genetics method	semapv:ManualMappingCuration	OMOP domain: Measurement
