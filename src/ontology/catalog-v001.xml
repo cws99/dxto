@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
   <group id="odk-managed-catalog" prefer="public">
-    <uri name="http://purl.obolibrary.org/obo/dxto/imports/mondo_import.owl" uri="imports/mondo_import.owl"/>
-    <uri name="http://purl.obolibrary.org/obo/dxto/imports/ncit_import.owl" uri="imports/ncit_import.owl"/>
-    <uri name="http://purl.obolibrary.org/obo/dxto/components/dxto-diagnostic-relations.owl" uri="components/dxto-diagnostic-relations.owl"/>
-    <uri name="http://purl.obolibrary.org/obo/dxto/components/dxto-mappings.owl" uri="components/dxto-mappings.owl"/>
+    <uri name="http://purl.obolibrary.org/obo/dxto/imports/mondo_import.owl" uri="imports/mondo_import.owl" />
+    <uri name="http://purl.obolibrary.org/obo/dxto/components/dxto-diagnostic-relations.owl" uri="components/dxto-diagnostic-relations.owl" />
+    <uri name="http://purl.obolibrary.org/obo/dxto/components/dxto-mappings.owl" uri="components/dxto-mappings.owl" />
   </group>
 </catalog>

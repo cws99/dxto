@@ -9,28 +9,34 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/dxto.owl>
-
+Import(<http://purl.obolibrary.org/obo/dxto/components/dxto-diagnostic-relations.owl>)
+Import(<http://purl.obolibrary.org/obo/dxto/components/dxto-mappings.owl>)
 Import(<http://purl.obolibrary.org/obo/dxto/imports/mondo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/dxto/imports/ncit_import.owl>)
-
-
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Diagnostic Test Ontology")
-
 
 Declaration(Class(<http://purl.obolibrary.org/obo/DXTO_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
+
 
 ############################
 #   Classes
