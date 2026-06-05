@@ -42,19 +42,25 @@ $(TMPDIR)/stamp-component-dxto-diagnostic-relations.owl: \
 # ============================================================
 # Component: dxto-mappings.owl
 #
-# Source: $(MAPPINGS_SRC)  (SSSOM TSV with metadata header)
-# Converts to OWL-RDF via the sssom-utils CLI, then re-annotates
-# the ontology IRI so catalog-v001.xml can resolve it correctly.
+# Source: $(MAPPINGS_TEMPLATE)  (ROBOT template TSV)
+# The SSSOM file ($(MAPPINGS_SRC)) is the human-readable source
+# of truth; the ROBOT template is the build artefact derived
+# from it. Uses AI (IRI-valued annotation) for skos:exactMatch.
 # ============================================================
 
+MAPPINGS_TEMPLATE = $(COMPONENTSDIR)/dxto-mappings-template.tsv
+
+ALL_TSV_FILES += $(MAPPINGS_TEMPLATE)
+
 $(TMPDIR)/stamp-component-dxto-mappings.owl: \
-		$(MAPPINGS_SRC) | $(TMPDIR)
-	sssom convert \
-		--input $< \
-		--output-format owl-rdf \
-		-o $(TMPDIR)/mappings-raw.owl && \
-	$(ROBOT) annotate \
-		-i $(TMPDIR)/mappings-raw.owl \
-		--ontology-iri $(ONTBASE)/components/dxto-mappings.owl \
+		$(MAPPINGS_TEMPLATE) $(SRC) | $(TMPDIR)
+	$(ROBOT) template \
+		--input $(SRC) \
+		--template $(MAPPINGS_TEMPLATE) \
+		--prefix "DXTO: http://purl.obolibrary.org/obo/DXTO_" \
+		--prefix "LOINC: https://loinc.org/" \
+		--prefix "skos: http://www.w3.org/2004/02/skos/core#" \
+		annotate \
+		  --ontology-iri $(ONTBASE)/components/dxto-mappings.owl \
 		-o $(COMPONENTSDIR)/dxto-mappings.owl && \
 	touch $@

@@ -1,0 +1,4 @@
+subject_label	loinc_match
+ID	AI skos:exactMatch
+DXTO:0000001	https://loinc.org/2077-6
+DXTO:0000002	https://loinc.org/38404-0
