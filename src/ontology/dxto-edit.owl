@@ -39,12 +39,51 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 
 ############################
+#   Object Properties
+############################
+
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/dxto/is_diagnostic_for>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/dxto/is_diagnostic_for> "is diagnostic for"@en)
+
+############################
+#   Annotation Properties
+############################
+
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
+
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/dxto/diagnostic_role>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/dxto/diagnostic_role> "diagnostic role"@en)
+
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/dxto/diagnostic_tier>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/dxto/diagnostic_tier> "diagnostic tier"@en)
+
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/dxto/diagnostic_evidence>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/dxto/diagnostic_evidence> "diagnostic evidence"@en)
+
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/source>))
+
+############################
 #   Classes
 ############################
 
 # Class: <http://purl.obolibrary.org/obo/DXTO_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/DXTO_0000000> "root node"@en)
+
+# Class: <http://purl.obolibrary.org/obo/DXTO_0000001> (sweat chloride test)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/DXTO_0000001>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/DXTO_0000001> "sweat chloride test"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/DXTO_0000001> "A quantitative measurement of chloride concentration in sweat collected by pilocarpine iontophoresis, used to diagnose cystic fibrosis."@en)
+SubClassOf(<http://purl.obolibrary.org/obo/DXTO_0000001> <http://purl.obolibrary.org/obo/DXTO_0000000>)
+
+# Class: <http://purl.obolibrary.org/obo/DXTO_0000002> (CFTR gene targeted mutation analysis)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/DXTO_0000002>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/DXTO_0000002> "CFTR gene targeted mutation analysis"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/DXTO_0000002> "A molecular genetic test that detects specific pathogenic variants in the CFTR gene in blood or tissue, used to confirm a diagnosis of cystic fibrosis."@en)
+SubClassOf(<http://purl.obolibrary.org/obo/DXTO_0000002> <http://purl.obolibrary.org/obo/DXTO_0000000>)
 
 
 )

@@ -1,0 +1,4 @@
+test	disease	role	tier	evidence	guideline_provenance
+ID	SC dxto:is_diagnostic_for some %	A dxto:diagnostic_role	A dxto:diagnostic_tier	A dxto:diagnostic_evidence	A dcterms:source
+DXTO:0000001	MONDO:0009061	confirmatory	1	IDA	https://www.cff.org/medical-professionals/sweat-test-clinical-care-guidelines
+DXTO:0000002	MONDO:0009061	confirmatory	1	IDA	https://doi.org/10.1016/j.jpeds.2016.09.064
